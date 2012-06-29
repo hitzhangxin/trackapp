@@ -375,11 +375,25 @@
 		CALL(sys_rt_tgsigqueueinfo)
 		CALL(sys_perf_event_open)
 /* 365 */	CALL(sys_recvmmsg)
+		CALL(sys_accept4)
+		CALL(sys_fanotify_init)
+		CALL(sys_fanotify_mark)
+		CALL(sys_prlimit64)
+/* 370 */	CALL(sys_name_to_handle_at)
+		CALL(sys_open_by_handle_at)
+		CALL(sys_clock_adjtime)
+		CALL(sys_syncfs)
+		CALL(sys_sendmmsg)
+/* 375 */	CALL(sys_setns)
 
 		CALL(sys_myinputtrack)
-		CALL(sys_myfindtrack)
-		CALL(sys_mydeletetrack)
 
+		CALL(sys_myfindtrackx)
+		CALL(sys_myfindtracky)
+		CALL(sys_myfindtrackz)
+
+		CALL(sys_mydeletetrack)
+		CALL(sys_test)
 #ifndef syscalls_counted
 .equ syscalls_padding, ((NR_syscalls + 3) & ~3) - NR_syscalls
 #define syscalls_counted

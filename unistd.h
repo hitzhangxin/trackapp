@@ -392,10 +392,26 @@
 #define __NR_rt_tgsigqueueinfo		(__NR_SYSCALL_BASE+363)
 #define __NR_perf_event_open		(__NR_SYSCALL_BASE+364)
 #define __NR_recvmmsg			(__NR_SYSCALL_BASE+365)
+#define __NR_accept4			(__NR_SYSCALL_BASE+366)
+#define __NR_fanotify_init		(__NR_SYSCALL_BASE+367)
+#define __NR_fanotify_mark		(__NR_SYSCALL_BASE+368)
+#define __NR_prlimit64			(__NR_SYSCALL_BASE+369)
+#define __NR_name_to_handle_at		(__NR_SYSCALL_BASE+370)
+#define __NR_open_by_handle_at		(__NR_SYSCALL_BASE+371)
+#define __NR_clock_adjtime		(__NR_SYSCALL_BASE+372)
+#define __NR_syncfs			(__NR_SYSCALL_BASE+373)
+#define __NR_sendmmsg			(__NR_SYSCALL_BASE+374)
+#define __NR_setns			(__NR_SYSCALL_BASE+375)
 
-#define __NR_myinputtrack		(__NR_SYSCALL_BASE+366)
-#define __NR_myfindtrack		(__NR_SYSCALL_BASE+367)
-#define __NR_mydeletetrack		(__NR_SYSCALL_BASE+368)
+#define __NR_myinputtrack		(__NR_SYSCALL_BASE+376)
+
+#define __NR_myfindtrackx		(__NR_SYSCALL_BASE+377)
+#define __NR_myfindtracky		(__NR_SYSCALL_BASE+378)
+#define __NR_myfindtrackz		(__NR_SYSCALL_BASE+379)
+
+#define __NR_mydeletetrack		(__NR_SYSCALL_BASE+380)
+
+#define __NR_test	       		(__NR_SYSCALL_BASE+381)
 
 /*
  * The following SWIs are ARM private.
