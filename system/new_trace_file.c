@@ -5,7 +5,7 @@
 
 #include "gloable.h"
 
-int main () {
+int mk_trace_file () {
     //获取当前时间的函数
     time_t nowtime;
     struct tm *timeinfo;

@@ -5,19 +5,19 @@
 #include "gloable.h"
 
 int main() {
-//    char trace_data[1024];
+
     struct trace *trace = (struct trace*)malloc(sizeof(struct trace)); 
-//    struct node *tail = NULL;
- 
     get_trace(trace);
     struct node *p1 = trace->head;
     struct node *p2 = trace->head->next;
+
     //在压缩之前的trace内容如下
     printf("before delete the similar nodes:\n");
     while (p1) {
         printf("(%c , %c) ", p1->x, p1->y);
         p1 = p1->next;
     }
+
     p1 = trace->head;
     // 处理冗余数据，压缩存储
     while (p2) {
@@ -29,6 +29,7 @@ int main() {
             p2 = p2->next;
         }
     }
+
     //打印压缩后的trace内容
     printf("\nafter process \n");
     p1 = trace->head;
@@ -37,6 +38,7 @@ int main() {
         p1 = p1->next;
     }
     printf("\n");
+    put_trace(trace); 
 
     p1 = trace->head;
     while(p1){
